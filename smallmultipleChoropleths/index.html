@@ -127,7 +127,7 @@
 	var legendX = 0.84, legendY = 0.5
 
 	// id attribute and the name attribute to be used in the tooltip
-	var idAttribute = 'GEOID10', nameAttribute = 'NAMELSAD10';
+	var idAttribute = 'GEOID10', nameAttribute = 'census_2010_county_DP1_NAMELSAD10';
 
 	// Find the abbreviations of color names from https://colorbrewer2.org/
 	var colors =  colorbrewer.BuGn;
@@ -139,17 +139,18 @@
 	// att1format: enter the d3.format string to display the variables in the format you like
 	// Check this link on how to specify the desired format:
 	// https://observablehq.com/@d3/d3-format
-	var att1 = 'DP0010001', att1alias = 'Population by County', att1format = '.0f',
-	att2 = 'ALAND10', att2alias =  'Land Area by Capita by County', att2format = '.0f',
-	att3 = 'AWATER10', att3alias = 'Water Area per Capita by County', att3format = '.0f',
-	att4 = 'ALAND10', att4alias = '% of County Area Covered by Land', att4format = '.0f';
+	var att1 = 'census_2010_county_DP1_DP0010001', att1alias = 'Population by County', att1format = '.0f',
+	att2 = 'census_2010_county_DP1_ALAND10', att2alias =  'Land Area by Capita by County', att2format = '.0f',
+	att3 = 'census_2010_county_DP1_AWATER10', att3alias = 'Water Area per Capita by County', att3format = '.0f',
+	att4 = 'census_2010_county_DP1_ALAND10', att4alias = '% of County Area Covered by Land', att4format = '.0f';
 
   // enter below all variables that should be normalized. If you would like to multiple the variables
 	// with a constant value enter them in multiplyBy array. If there is no need for multiplication,
 	// simply enter 1 for each value in multiplyBy.
   var attributesToBeNormalized = [att2, att3, attr4];
 	var multiplyBy = [1, 1, 1];
-	var divideBy = ['DP0010001', 'DP0010001', ['ALAND10' + 'AWATER10'];
+	var divideBy = ['census_2010_county_DP1_DP0010001', 'census_2010_county_DP1_DP0010001', 'census_2010_county_DP1_ALAND10';
+	//['census_2010_county_DP1_ALAND10' + 'census_2010_county_DP1_AWATER10']
 	// if your variables are not raw counts and they are already normalized, comment out above, and
 	//uncomment below:
 	// var attributesToBeNormalized = [];

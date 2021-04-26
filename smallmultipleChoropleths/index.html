@@ -148,15 +148,15 @@
   // enter below all variables that should be normalized. If you would like to multiple the variables
 	// with a constant value enter them in multiplyBy array. If there is no need for multiplication,
 	// simply enter 1 for each value in multiplyBy.
-  var attributesToBeNormalized = [att2, att3, attr4];
+  var attributesToBeNormalized = [att2, att3, att4];
 	var multiplyBy = [1, 1, 1];
-	//var divideBy = ['census_2010_county_DP1_DP0010001', 'census_2010_county_DP1_DP0010001', 'census_2010_county_DP1_ALAND10'];
-	//['census_2010_county_DP1_ALAND10' + 'census_2010_county_DP1_AWATER10']
+	var divideBy = ['census_2010_county_DP1_DP0010001', 'census_2010_county_DP1_DP0010001', ['census_2010_county_DP1_ALAND10' + 'census_2010_county_DP1_AWATER10']];
+
 	// if your variables are not raw counts and they are already normalized, comment out above, and
 	//uncomment below:
 	// var attributesToBeNormalized = [];
 	// var multiplyBy = [];
-	var divideBy = [1,1,1];
+	// var divideBy = [];
 
 	//DO NOT CHANGE ANYTHING BELOW THIS POINT UNLESS YOU KNOW WHAT YOU ARE DOING
 	////////////////////////////////////////////////////////////////////////////////////////////////

@@ -140,21 +140,21 @@
 	// Check this link on how to specify the desired format:
 	// https://observablehq.com/@d3/d3-format
 	var att1 = 'attributes_Population', att1alias = 'Population', att1format = '.0f',
-	att2 = 'AWATER', att2alias =  'Area Water', att2format = '.0f',
-	att3 = 'attributes_Population', att3alias = 'Area Land', att3format = '.0f',
-	att4 = 'AWATER', att4alias = 'Area Water', att4format = '.0f';
+	att2 = 'attributes_TotalHousingUnits', att2alias =  'Area Water', att2format = '.0f',
+	att3 = 'attributes_MedianRoomsWithinHousingUnits', att3alias = 'Area Land', att3format = '.0f',
+	att4 = 'attributes_MedianValueOwnerOccupiedUnits', att4alias = 'Area Water', att4format = '.0f';
 
   // enter below all variables that should be normalized. If you would like to multiple the variables
 	// with a constant value enter them in multiplyBy array. If there is no need for multiplication,
 	// simply enter 1 for each value in multiplyBy.
-  var attributesToBeNormalized = [att2, att3, att4];
-	var multiplyBy = [100, 100, 100];
-	var divideBy = [1,1,1];
+  	//var attributesToBeNormalized = [att2, att3, att4];
+	//var multiplyBy = [1, 1, 1];
+	//var divideBy = [1,1,1];
 	// if your variables are not raw counts and they are already normalized, comment out above, and
 	//uncomment below:
-	// var attributesToBeNormalized = [];
-	// var multiplyBy = [];
-	// var divideBy = [];
+	 var attributesToBeNormalized = [];
+	 var multiplyBy = [];
+	 var divideBy = [];
 
 	//DO NOT CHANGE ANYTHING BELOW THIS POINT UNLESS YOU KNOW WHAT YOU ARE DOING
 	////////////////////////////////////////////////////////////////////////////////////////////////

@@ -116,7 +116,7 @@
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////
 	// TODO: Change the variables below to customize the small multiples interface for your data
-	var polygonJSONFile = 'data/us_states_geo.geojson'
+	var polygonJSONFile = 'data/us_shape.geojson'
 	// change the projection if needed *d3.geoAlbers()*
 	var projection = d3.geoTransverseMercator();
 	var widthheightRatio = 0.8;
@@ -141,7 +141,7 @@
 	// https://observablehq.com/@d3/d3-format
 	var att1 = 'ALAND', att1alias = 'Area Land', att1format = '.0f',
 	att2 = 'AWATER', att2alias =  'Area Water', att2format = '.0f',
-	att3 = 'ALAND', att3alias = 'Area Land', att3format = '.0f',
+	att3 = 'attributes_Population', att3alias = 'Area Land', att3format = '.0f',
 	att4 = 'AWATER', att4alias = 'Area Water', att4format = '.0f';
 
   // enter below all variables that should be normalized. If you would like to multiple the variables

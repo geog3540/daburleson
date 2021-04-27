@@ -82,12 +82,12 @@
 			<br />
 			<div class="row">
 				<div class="col-sm-6">
-					<span><p><h3 class='mapTitle'>SNAP Benefits</h3>% households that receive Supplemental Nutrition Assistance Program (SNAP).</p></span>
+					<span><p><h3 class='mapTitle'>People per Housing Unit</h3>Number of people on average living in a housing unit</p></span>
 					<div id="divMap1"></div>
 					<div id="divHist1"></div>
 				</div>
 				<div class="col-sm-6">
-					<h3 class='mapTitle'>Kids</h3><p>% kids between 0 and 17 years old.</p>
+					<h3 class='mapTitle'>Value of Homes</h3><p>National percentile for the value of owner-occupied homes</p>
 					<div id="divMap2"></div>
 					<div id="divHist2"></div>
 				</div>
@@ -95,12 +95,12 @@
 
 			<div class="row">
 				<div class="col-sm-6">
-					<h3 class='mapTitle'>Senior Citizens</h3><p>% senior citizens 65+ years old.</p>
+					<h3 class='mapTitle'>Rent Payments</h3><p>National percentile for rent payments</p>
 					<div id="divMap3"></div>
 					<div id="divHist3"></div>
 				</div>
 				<div class="col-sm-6">
-					<h3 class='mapTitle'>Poverty Rate</h3><p>% population with income at or below the Federal poverty thresholds.</p>
+					<h3 class='mapTitle'>Rent per Room</h3><p>Rent expected to be incurred per room in housing unit</p>
 					<div id="divMap4"></div>
 					<div id="divHist4"></div>
 				</div>
@@ -118,7 +118,7 @@
 	// TODO: Change the variables below to customize the small multiples interface for your data
 	var polygonJSONFile = 'data/us_shape.geojson'
 	// change the projection if needed *d3.geoAlbers()*
-	var projection = d3.geoAlbers();
+	var projection = d3.geoMercator();
 	var widthheightRatio = 0.8;
 	// Relative placement of legend that ranges between 0 and 1.
 	// 0 is the start, whereas 1 i the end of each panel.

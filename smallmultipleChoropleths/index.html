@@ -124,7 +124,7 @@
 	// 0 is the start, whereas 1 i the end of each panel.
 	// If you want to put the legend on the left, then use 0.
 	// legendY = 0.5 puts the legend in the middle of the Y Axis.
-	var legendX = 0.84, legendY = 0.5;
+	var legendX = 0, legendY = 0.8;
 
 	// id attribute and the name attribute to be used in the tooltip
 	var idAttribute = 'AFFGEOID', nameAttribute = 'NAME';
@@ -139,9 +139,9 @@
 	// att1format: enter the d3.format string to display the variables in the format you like
 	// Check this link on how to specify the desired format:
 	// https://observablehq.com/@d3/d3-format
-		var att1 = 'attributes_att1', att1alias = 'People per Housing Unit', att1format = '.0f',
-	att2 = 'attributes_att2', att2alias =  'Home Value Percentile', att2format = '.0f',
-	att3 = 'attributes_att3', att3alias = 'Rent Payment Percentile', att3format = '.0f',
+		var att1 = 'attributes_att1', att1alias = 'People per Housing Unit', att1format = '.2f',
+	att2 = 'attributes_att2', att2alias =  'Home Value Percentile', att2format = '.2f',
+	att3 = 'attributes_att3', att3alias = 'Rent Payment Percentile', att3format = '.2f',
 	att4 = 'attributes_att4', att4alias = 'Rent per Room', att4format = '.0f';
 
   // enter below all variables that should be normalized. If you would like to multiple the variables
@@ -237,7 +237,7 @@
 			var polygons = data;
 			var proj = d3.geoPath().pointRadius(2);
 			// TODO: change the projection details here below - including specific parameters such as rotation, extent, etc.
-			proj.projection(projection.rotate([76 + 35 / 60, - 40]).fitSize([width, height], polygons));
+			proj.projection(projection.fitSize([width, height], polygons));
 
 			////////////////////////////////////////////////////
 			// Normalize based multiplyby and divideby values
